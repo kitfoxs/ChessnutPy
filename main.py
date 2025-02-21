@@ -69,7 +69,7 @@ def get_ip():
         s.connect(('10.254.254.254', 1))
         IP = s.getsockname()[0]
     except Exception:
-        IP = None
+        IP = 'localhost'
     finally:
         s.close()
     return IP
