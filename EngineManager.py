@@ -45,6 +45,11 @@ class EngineManager:
             self.init_scid_eco_dict()
             self.write_eco_dict()
 
+        # Macbook Pro M4 compatibility
+        if options.macbook_pro_m4_compat:
+            self.engine_path = "/opt/homebrew/bin/stockfish"
+            self.suggestion_engine_path = "/opt/homebrew/bin/stockfish"
+
     async def set_engine_limit(self, time, nodes, depth, at_init=False):
         self.limit = chess.engine.Limit(time, nodes, depth)
         self.options.engine_time = time

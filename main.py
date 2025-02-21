@@ -125,6 +125,7 @@ if __name__ == "__main__":
     p.add_argument('--logfile', default="log.log")
     p.add_argument('--username', default="user",
                    help='Name of the player when creating PGN files')
+    p.add_argument('--macbook_pro_m4_compat', default=False, action="store_true", help='Enable compatibility for Macbook Pro M4')  # P62d8
     # TODO: flags should never default to True otherwise they are not changeable
     options = p.parse_args()
     options.save_function = lambda: save_config(options)
