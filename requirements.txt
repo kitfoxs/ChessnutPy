@@ -1,6 +1,7 @@
+# Updated requirements to resolve installation issues
 async-timeout==4.0.3
+aiohttp==3.7.4
 asyncio==3.4.3
-bleak==0.20.2
 bleak==0.20.2
 ConfigArgParse==1.5.3
 chess==1.10.0

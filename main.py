@@ -56,8 +56,8 @@ async def go():
     run_task.add_done_callback(print_trace_and_quit)
     if not options.no_server:
         return await start_server(b)
-    while not run_task.done():
-        await asyncio.sleep(1.0)
+    else:
+        return asyncio.Future()
 
 
 def get_ip():
@@ -126,6 +126,7 @@ if __name__ == "__main__":
     p.add_argument('--username', default="user",
                    help='Name of the player when creating PGN files')
     p.add_argument('--macbook_pro_m4_compat', default=False, action="store_true", help='Enable compatibility for Macbook Pro M4')  # P62d8
+    p.add_argument('--device_name', default='Chessnut Pro', help='Name of the device')
     # TODO: flags should never default to True otherwise they are not changeable
     options = p.parse_args()
     options.save_function = lambda: save_config(options)
@@ -151,8 +152,10 @@ if __name__ == "__main__":
             asyncio.run(go())
         elif options.hosts == 'auto-hosts':
             host = get_ip()
-            print(host)
-            hosts = [host, 'localhost'] if host else 'localhost'
+            if host is None:
+                hosts = ['localhost']
+            else:
+                hosts = [host, 'localhost']
             web.run_app(go(), host=hosts, port=options.port)
         elif len(options.hosts) > 0:
             hosts = options.hosts
