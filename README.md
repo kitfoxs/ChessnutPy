@@ -80,6 +80,21 @@ To make the Chessnut Pro functional on a Macbook Pro M4, follow these steps:
 4. Run the program using `python main.py`.
 5. If you encounter any issues, refer to the documentation or seek help from the community.
 
+## One-Click Install for Macbook Pro M4
+
+To make the installation process easier for Macbook Pro M4 users, we have provided a one-click install script. Follow these steps:
+
+1. Download the `install_macbook_pro_m4.sh` script from the repository.
+2. Open a terminal and navigate to the directory where the script is located.
+3. Run the script using the following command:
+
+```bash
+./install_macbook_pro_m4.sh
+```
+
+4. The script will install Python 3.8, create a virtual environment, install the required dependencies, and configure the environment for Macbook Pro M4 compatibility.
+5. Once the script completes, you can run the program using `python main.py`.
+
 ## Credits
  rmarabini, for https://github.com/rmarabini/chessnutair \
  Graham O'Neil, for the instruction how the board works (pdf) \
