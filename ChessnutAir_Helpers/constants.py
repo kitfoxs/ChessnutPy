@@ -1,5 +1,5 @@
 """ Constant used in the program"""
-DEVICE_LIST = ['Chessnut Air', 'Smart Chess']
+DEVICE_LIST = ['Chessnut Air', 'Smart Chess', 'Chessnut Pro']
 NONEXISTENT_CHARACTERISTICS = ["1B7E8271-2877-41C3-B46E-CF057C562023", "1B7E8261-2877-41C3-B46E-CF057C562023",
                                "1b7e8281-2877-41c3-b46e-cf057c562023"]  # maybe for another board?
 
@@ -9,6 +9,10 @@ class BtCharacteristics:
     read_misc_data =    '1B7E8273-2877-41C3-B46E-CF057C562023'# noqa
     read_board_data =   '1B7E8262-2877-41C3-B46E-CF057C562023'# noqa
     read_otb_data =     '1b7e8283-2877-41c3-b46e-cf057c562023'# noqa
+    write_pro =         '1B7E8272-2877-41C3-B46E-CF057C562024'# noqa
+    read_misc_data_pro = '1B7E8273-2877-41C3-B46E-CF057C562024'# noqa
+    read_board_data_pro = '1B7E8262-2877-41C3-B46E-CF057C562024'# noqa
+    read_otb_data_pro = '1b7e8283-2877-41c3-b46e-cf057c562024'# noqa
 
 
 class BtCommands:

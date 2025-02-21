@@ -58,6 +58,17 @@ interface via your web browser and 'http://localhost:8080' or from another machi
  (you have to acquire a lichess-token and put it in your config)
  8. We also added the ability to start a new game by pushing the on/off button.
  9. The other button on the board reads the state of the board, so you can play any position you want.
+
+## Mac OS Specific Instructions
+
+To make the Chessnut Pro functional on Mac OS, follow these steps:
+
+1. Ensure you have Python 3.8 or later installed on your Mac.
+2. Install the required dependencies by running `pip install -r requirements.txt`.
+3. Make sure you have the latest version of BlueZ installed.
+4. Run the program using `python main.py`.
+5. If you encounter any issues, refer to the documentation or seek help from the community.
+
 ## Credits
  rmarabini, for https://github.com/rmarabini/chessnutair \
  Graham O'Neil, for the instruction how the board works (pdf) \

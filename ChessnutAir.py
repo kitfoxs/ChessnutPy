@@ -1,5 +1,5 @@
 """
-Discover and talk to chessnut Air devices.
+Discover and talk to chessnut Air and Pro devices.
 See pdf file Chessnut_communications.pdf
 for more information.
 """
@@ -47,7 +47,7 @@ def board_state_as_square_and_piece(board_state: bytearray) -> Iterable[SquareAn
 
 class ChessnutAir:
     """
-    Class created to discover and connect to chessnut Air devices.
+    Class created to discover and connect to chessnut Air and Pro devices.
     It discovers the first device with a name that matches the names in DEVICE_LIST.
     """
 
@@ -89,12 +89,12 @@ class ChessnutAir:
         return False
 
     async def discover(self) -> None:
-        """Scan for chessnut Air devices"""
+        """Scan for chessnut Air and Pro devices"""
         log.info("scanning, please wait...")
         await BleakScanner.find_device_by_filter(
                 self._filter_by_name)
         if self._device is None:
-            log.info("No chessnut Air devices found")
+            log.info("No chessnut Air or Pro devices found")
             return
         log.info("done scanning")
 
