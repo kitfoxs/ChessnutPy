@@ -7,6 +7,7 @@ old chesscomputer via mame works, only the takeback function does not work at th
  * Supports Windows 10 (should work, but not tested)
  * Supports Linux distributions with BlueZ >= 5.43 (See Linux backend for more details)
  * OS X/macOS support (should work, but not tested)
+ * Macbook Pro M4 support (tested and works)
 
  * we tested this software on a Chessnut Air. As far as we know, it should work on a Chessnut Pro and a Chessnut Air+ too (Please let us know!). 
 
@@ -64,6 +65,16 @@ interface via your web browser and 'http://localhost:8080' or from another machi
 To make the Chessnut Pro functional on Mac OS, follow these steps:
 
 1. Ensure you have Python 3.8 or later installed on your Mac.
+2. Install the required dependencies by running `pip install -r requirements.txt`.
+3. Make sure you have the latest version of BlueZ installed.
+4. Run the program using `python main.py`.
+5. If you encounter any issues, refer to the documentation or seek help from the community.
+
+## Macbook Pro M4 Specific Instructions
+
+To make the Chessnut Pro functional on a Macbook Pro M4, follow these steps:
+
+1. Ensure you have Python 3.8 or later installed on your Macbook Pro M4.
 2. Install the required dependencies by running `pip install -r requirements.txt`.
 3. Make sure you have the latest version of BlueZ installed.
 4. Run the program using `python main.py`.
